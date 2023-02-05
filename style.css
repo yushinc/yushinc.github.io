@@ -1,3 +1,351 @@
+body {
+    background-color: white;
+}
 .hidden {
     display: none;
 }
+
+.img {
+    width:100%;
+}
+
+#main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 1000px;
+    height: 650px;
+    box-shadow: #454548 0px 0px 20px;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    border-style:solid;
+}
+
+/* QUOTE */
+#quotes {
+    width: 450px;
+    height: 140px;
+    background-color:#3396FE;
+    border-radius: 20px;
+
+    position:absolute; /* 부모 element 기준 위치 지정 */
+    right: 40px;
+    top: 5%
+}
+
+#innerQuote {
+    width: 450px;
+    height: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#quotes h5 {
+    width: 142px;
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top:5px;
+    border-bottom: 2px solid white;
+}
+
+#quotes span {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+
+    position:absolute; /* 부모 element 기준 위치 지정 */
+    left: 10%;
+    right: 10%;
+    top: 30%;
+    transform: translate(0%, 0%);
+}
+
+
+/* GREETING */
+#login-form input {
+    width: 390px;
+    height: 50px;
+    margin-left:10px;
+
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    border: 0;
+    
+    background: transparent;
+    outline: 0;
+    list-style: none;
+}
+
+#login-form input::placeholder {
+    color: black;
+}
+
+#greetings {
+    width: 360px;
+    height: 50px;
+    margin-left:10px;
+
+    position: absolute;
+    left: 40px;
+    top:4%;
+}
+
+#greeting, #names {
+    margin: 0;
+    color: black;
+    font-size: 40px;
+}
+
+#emoji {
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+    float:right;
+    margin-top: -100px;
+    margin-right: -70px;
+}
+
+/* REALTIME - CLOCK AND WEATHER */
+#realTime {
+    width: 430px;
+    height: 320px;
+    background-color:#3396FE;
+    border-radius: 20px;
+    position:absolute; /* 부모 element 기준 위치 지정 */
+    left: 40px;
+    bottom:27%;
+}
+
+#clock {
+    font-size: 80px;
+    color: white;
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 12%;
+    margin-bottom: 0;
+}
+
+#todayBox {
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    border-radius: 20%;
+    position: absolute;
+    left: 23px;
+    bottom:20px;
+}
+
+#today {
+    color: #3396FE;
+    font-size:45px;
+    font-weight: bold;
+    float: left;
+    margin-left: 32px;
+    margin-top: 15%;
+}
+
+#weather {
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    bottom:7%;
+    left: 40px;
+    
+}
+
+#city {
+    color: #3396FE;
+    font-size: 25px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#temp {
+    color: #3396FE;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+/* RANDOM IMAGE */
+#imageBox img {
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
+    position: absolute;
+    right: 23px;
+    bottom:20px;
+}
+
+/* COUNTDOWN */
+#countdown {
+    width: 430px;
+    height: 120px;
+    background-color:#3396FE;
+    border-radius: 20px;
+
+    position:absolute; /* 부모 element 기준 위치 지정 */
+    left: 40px;
+    bottom:5%;
+}
+
+#innerCountdown {
+    width: 160px;
+    height: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#cdTitle {
+    width: 137px;
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top:5px;
+    margin-bottom: 0px;
+    border-bottom: 2px solid white;
+
+}
+
+#toDate {
+    width: 170px;
+    height: 50px;
+    position: absolute;
+    margin-left: 60%;
+    margin-top: -35px;
+}
+
+#toDate h5 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    margin-top:8px;
+    margin-left: 5px;
+}
+
+#toDate input {
+    float:right;
+    margin-top: 13px;
+    margin-right: 10%;
+}
+
+#remain {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+/* TODO */
+#todo {
+    width: 450px;
+    height: 420px;
+    background-color:#E9E9EB;
+    border-radius: 20px;
+    border-color: #E9E9EB;
+    border-width: 2px;
+    border-style:solid;
+    position:absolute; /* 부모 element 기준 위치 지정 */
+    right: 40px;
+    bottom:5%;
+}
+
+#innerTodo {
+    width: 420px;
+    height: 40px;
+    border-color: #929298;
+    border-width: 2px;
+    border-style:solid;
+    background-color: #E9E9EB;
+    border-radius: 20px;
+
+    position:absolute; /* 부모 element 기준 위치 지정 */
+    bottom:15px;
+    left: 13px;
+}
+
+#todo-form {
+    width:420px;
+    float:left;
+}
+
+#todo-form input {
+    width: 360px;
+    height: 35px;
+    margin-left:10px;
+
+    float: left;
+    font-size: 20px;
+    color: black;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    list-style: none;
+}
+
+#todo-form #send {
+    background: url("emoji/sendBtn.png");
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    margin-top:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+    float:right;
+}
+
+#todo-list li {
+    list-style: none;
+}
+
+#todo-list li span {
+    background-color: #3396FE;
+    color: white;
+    font-weight: 400px;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 15px;
+    float: right;
+}
+
+#todo-list li button {
+    width: 20px;
+    height: 20px;
+    background-color: #E9E9EB;
+    color:#929298;
+    border:none;
+    float:right;
+    margin-top: 20px;
+
+}
+
+#todo-list div {
+    height: 50px;
+    float:bottom;
+}
+
+#todoDivs {
+    width:450px;
+    height: 350px;
+    position: relative;
+    overflow: scroll;
+    margin-bottom:5%;
+}
+
+#todoDivs::-webkit-scrollbar {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+

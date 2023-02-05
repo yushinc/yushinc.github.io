@@ -1,6 +1,8 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input"); 
 const greeting = document.querySelector("#greeting");
+const names = document.querySelector("#names");
+const emoji = document.querySelector("#emoji");
 
 // 일반적으로 string만 포함된 변수는 대문자로 표기하고 string을 저장하고 싶을 때 사용
 const HIDDEN_CLASSNAME = "hidden";
@@ -27,8 +29,37 @@ function onLoginSubmit(event) {
 
 // 이름과 메시지 출력
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`; // = "Hello " + username;
+    const date = new Date();
+    const hour = date.getHours();
+    let text;
+    
+    if (hour > 23 || hour < 5) {
+        text = "Morning";
+        emoji.innerText = "🌕";
+    }
+    else if (hour > 4 && hour < 12) {
+        text = "Morning";
+        emoji.innerText = "🌞";
+    }
+    else if (hour > 11 && hour < 18) {
+        text = "Afternoon";
+        emoji.innerText = "🌆";
+    }
+    else if (hour > 19 && hour < 22) {
+        text = "Evening"
+        emoji.innerText = "🌙";
+    } 
+    else {
+        text = "Night";
+        emoji.innerText = "🌕";
+    }
+
+    greeting.innerText = `Good ${text}`; 
+    names.innerText = username; 
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    names.classList.remove(HIDDEN_CLASSNAME);
+    emoji.classList.remove(HIDDEN_CLASSNAME);
+    
 }
 
 // 로컬저장소에 저장된 사용자 이름 변수

@@ -4,58 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Momentum App</title>
+    <title>Personal Place</title>
   </head>
   <body>
 
-    <!-- LOGIN -->
-    <form id="login-form" class="hidden">
-        <input 
-            required
-            maxlength="15"
-            type="text" 
-            placeholder="What is your name?" 
-        />
-        <input type="submit" value="Log In">
-    </form>
-    
-    <!-- CLOCK -->
-    <h2 id="clock"></h2>
+    <div id="main">
+      <!-- GREETING AND LOGIN-->
+      <div id="greetings">
+        <h1 id="greeting" class="hidden"></h1>
+        <h1 id="names" class="hidden"></h1>
+        <h2 id="emoji" class="hidden">dd</h2>
+        <div id="loginDiv">
+          <form id="login-form" class="hidden">
+              <input 
+                  required
+                  maxlength="10"
+                  type="text" 
+                  placeholder="What is your Name?"
+              />
+           </form>
+        </div>
+      </div>
 
-    <!-- GREETING -->
-    <h1 id="greeting" class="hidden"></h1>
-
-    <!-- TO DO LIST -->
-    <form id="todo-form">
-      <input type="text" required placeholder="Write a To Do and Press Enter" />
-    </form>
-    <ul id="todo-list">
-      <!-- js에서 추가할 elements
-      <li>
+      <!-- QUOTES -->
+      <div id="quotes">
         <span></span>
-      </li>
-      ...
-      <button></button>
-      -->
-    </ul>
+        <div id="innerQuote">
+          <h5>TODAY QUOTE</h5>
+        </div>
+      </div>
+      
+      <!-- TO DO LIST -->
+      <div id="todo">
+        <div id="todoDivs">
+          <ul id="todo-list">
+          </ul>
+        </div>
+        <div id="innerTodo">
+          <form id="todo-form">
+            <input type="text" required placeholder="Write Your To Do!!" />
+            <input id="send" type="submit" value=""/>
+          </form>
+          <!--<img src="emoji/sendBtn.png">-->
+        </div>
+      </div>
 
-    <!-- QUOTE -->
-    <div id="quote">
-      <span></span>
-      <span></span>
+      <div id="realTime">
+        <!-- CLOCK -->
+        <h2 id="clock"></h2>
+
+        <div id="todayBox">
+          <!-- date -->
+          <div id="today"></div>
+          <!-- weather -->
+          <div id="weather">
+            <span id="city"></span>
+            <span id="temp"></span>
+          </div>
+        </div>
+        
+        <!-- random image -->
+        <div id="imageBox"></div>
+      </div> 
+
+      <!-- countdown -->
+      <div id="countdown">
+        <div id="innerCountdown">
+          <h5 id="cdTitle">COUNTDOWN</h5>
+          <div id="toDate">
+            <h5>To</h5>
+            <form>
+              <input id="inputDate" type="date" />
+            </form>
+          </div>
+          <div id="remain">00d 00h 00m 00s</div>
+        </div>
+      </div>
     </div>
 
-    <!-- weather -->
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
-
+    <script src="js/quotes.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

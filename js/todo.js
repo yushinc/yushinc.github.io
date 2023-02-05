@@ -24,7 +24,7 @@ function deleteToDo(event) {
     // -> event.target은 선택된 element의 property를 가지고있음
     // -> event.target.parentElement를 통해 선택된 element의 부모를 알 수 있음
 
-    const li = event.target.parentElement;
+    const li = event.target.parentElement.parentElement;
 
     li.remove();
 
@@ -37,6 +37,8 @@ function deleteToDo(event) {
 
 // paint todo
 function paintToDo(newTodo) { // newTodo(object type)
+
+    const div = document.createElement("div");
     const li = document.createElement("li"); 
     li.id = newTodo.id; // id를 html에 추가
 
@@ -48,9 +50,11 @@ function paintToDo(newTodo) { // newTodo(object type)
     button.innerText = "X";
     button.addEventListener("click", deleteToDo);
 
-    li.appendChild(span); // li의 자식으로 span 추가
-    li.appendChild(button); // li의 자식으로 delete button 추가
 
+    div.appendChild(button); // li의 자식으로 delete button 추가
+    div.appendChild(span); // li의 자식으로 span 추가
+
+    li.appendChild(div);
     toDoList.appendChild(li); // html list에 생성한 li 추가
 }
 
